@@ -75,7 +75,7 @@ impl Terminal {
         let padding = (self.size.width as usize).saturating_sub(length);
         " ".repeat(padding as usize)
     }
-    pub fn availablility() -> usize {
+    pub fn availability() -> usize {
         let colour = env::var("COLORTERM");
         if colour.unwrap_or_else(|_| "".to_string()) == "truecolor" {
             24

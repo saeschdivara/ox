@@ -136,7 +136,7 @@ impl Editor {
         let mut config = Reader::read(config_path);
         // Check for fallback colours
         if config.0.theme.fallback {
-            let max = Terminal::availablility();
+            let max = Terminal::availability();
             log!("Available Colours", max);
             if max != 24 {
                 // Fallback to 16 bit colours
